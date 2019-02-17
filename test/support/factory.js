@@ -1,7 +1,7 @@
 const path = require('path');
 const { factory, SequelizeAdapter } = require('factory-girl');
-const { FactoriesLoader } = require('src/infra/factoryGirl');
-const models = require('src/infra/database/models');
+const { FactoriesLoader } = require('src/infrastructure/factoryGirl');
+const models = require('src/infrastructure/database/models');
 
 const factoryGirl = new factory.FactoryGirl();
 factoryGirl.setAdapter(new SequelizeAdapter());

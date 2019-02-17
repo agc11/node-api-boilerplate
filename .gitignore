@@ -4,6 +4,9 @@
 # Node
 node_modules/
 
+# database
+.data/
+
 # Project specific
 config/database.js
 

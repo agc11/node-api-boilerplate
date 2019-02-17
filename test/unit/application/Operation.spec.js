@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const Operation = require('src/app/Operation');
+const Operation = require('src/application/Operation');
 
 describe('App :: Operation', () => {
   var CustomOperation;
@@ -19,7 +19,7 @@ describe('App :: Operation', () => {
 
         expect(() => {
           operation.on(operation.outputs.SUCCESS, () => {});
-        }).to.not.throw;
+        }).to.not.throw(Error, /Invalid output "INVALID" to operation CustomOperation/);;
       });
     });
 

@@ -2,14 +2,14 @@ const { createContainer, asClass, asFunction, asValue } = require('awilix');
 const { scopePerRequest } = require('awilix-express');
 
 const config = require('../config');
-const Application = require('./app/Application');
+const Application = require('./application/Application');
 const {
   CreateUser,
   GetAllUsers,
   GetUser,
   UpdateUser,
   DeleteUser
-} = require('./app/user');
+} = require('./application/user');
 
 const UserSerializer = require('./interfaces/http/user/UserSerializer');
 
@@ -20,9 +20,9 @@ const errorHandler = require('./interfaces/http/errors/errorHandler');
 const devErrorHandler = require('./interfaces/http/errors/devErrorHandler');
 const swaggerMiddleware = require('./interfaces/http/swagger/swaggerMiddleware');
 
-const logger = require('./infra/logging/logger');
-const SequelizeUsersRepository = require('./infra/user/SequelizeUsersRepository');
-const { database, User: UserModel } = require('./infra/database/models');
+const logger = require('./infrastructure/logging/logger');
+const SequelizeUsersRepository = require('./infrastructure/user/SequelizeUsersRepository');
+const { database, User: UserModel } = require('./infrastructure/database/models');
 
 const container = createContainer();
 

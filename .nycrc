@@ -2,7 +2,7 @@
   "cwd": "./src",
   "exclude": [
     "container.js",
-    "app/Application.js",
+    "application/Application.js",
     "interfaces/http"
   ],
   "reporter": [

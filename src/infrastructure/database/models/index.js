@@ -1,4 +1,4 @@
-const { ModelsLoader } = require('src/infra/sequelize');
+const { ModelsLoader } = require('src/infrastructure/sequelize');
 const Sequelize = require('sequelize');
 const { db: config } = require('config');
 

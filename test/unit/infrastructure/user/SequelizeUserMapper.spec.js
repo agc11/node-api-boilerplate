@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const User = require('src/domain/user/User');
-const SequelizeUserMapper = require('src/infra/user/SequelizeUserMapper');
+const SequelizeUserMapper = require('src/infrastructure/user/SequelizeUserMapper');
 
 describe('Infra :: User :: SequelizeUserMapper', () => {
   describe('.toEntity', () => {

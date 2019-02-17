@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const CreateUser = require('src/app/user/CreateUser');
+const CreateUser = require('src/application/user/CreateUser');
 
 describe('App :: User :: CreateUser', () => {
   var createUser;

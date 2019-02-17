@@ -63,11 +63,14 @@ _Notice that the boilerplate comes with a small application for user management 
 1. Clone the repository with `git clone --depth=1 https://github.com/talyssonoc/node-api-boilerplate`
 2. Setup the database on `config/database.js` (there's an example file there to be used with PostgreSQL 😉 )
 3. Install the dependencies with `yarn` (click here if [you don't have Yarn installed](https://yarnpkg.com/docs/install))
-4. Create the development and test databases you have setup on `config/database.js`
-5. Run the database migrations with `npm run sequelize db:migrate`
-6. Add some seed data to the development database with `npm run sequelize db:seed:all`
-7. Run the application in development mode with `npm run dev`
-8. Access `http://localhost:3000/api/users` and you're ready to go!
+4. Up database (docker-compose up -d --build)
+5. Create the development and test databases you have setup on `config/database.js`
+  docker-compose exec postgres-boilerplate psql -U postgres -c "CREATE DATABASE boilerplate_test;"
+  docker-compose exec postgres-boilerplate psql -U postgres -c "CREATE DATABASE boilerplate_development;"
+6. Run the database migrations with `npm run sequelize db:migrate`
+7. Add some seed data to the development database with `npm run sequelize db:seed:all`
+8. Run the application in development mode with `npm run dev`
+9. Access `http://localhost:3000/api/users` and you're ready to go!
 
 After playing a little bit with the boilerplate and _before_ implementing a real application with it I recommend you to read at least the `Setup` and the `Organization and architecture` sections of our [Wiki](https://github.com/talyssonoc/node-api-boilerplate/wiki). After that you'll be able to remove the example application files running `npm run cleanup`
 

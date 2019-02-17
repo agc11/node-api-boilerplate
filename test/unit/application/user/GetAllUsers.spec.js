@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const GetAllUsers = require('src/app/user/GetAllUsers');
+const GetAllUsers = require('src/application/user/GetAllUsers');
 
 describe('App :: User :: GetAllUsers', () => {
   var getAllUsers;

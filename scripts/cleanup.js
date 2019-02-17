@@ -27,7 +27,7 @@ const tasks = new Listr([
       return replace({
         files: containerPath,
         from: [
-          /\s*const \{(\n.*)+.*app\/user'\);/,
+          /\s*const \{(\n.*)+.*application\/user'\);/,
           /\s*const.*UsersRepository'\);/,
           /\s*const.*UserSerializer'\);/,
           /\, User: UserModel/,
@@ -44,13 +44,13 @@ const tasks = new Listr([
     title: 'Delete example files and tests',
     task() {
       return remove([
-        path.join(srcAndTestPath, 'app', 'user', '**'),
+        path.join(srcAndTestPath, 'application', 'user', '**'),
         path.join(srcAndTestPath, 'domain', 'user', '**'),
-        path.join(srcAndTestPath, 'infra', 'user', '**'),
+        path.join(srcAndTestPath, 'infrastructure', 'user', '**'),
         path.join(srcAndTestPath, 'interfaces', 'http', 'user', '**'),
-        path.join(srcPath, 'infra', 'database', 'migrate', '*.js'),
-        path.join(srcPath, 'infra', 'database', 'seeds', '*.js'),
-        path.join(srcPath, 'infra', 'database', 'models', 'User.js'),
+        path.join(srcPath, 'infrastructure', 'database', 'migrate', '*.js'),
+        path.join(srcPath, 'infrastructure', 'database', 'seeds', '*.js'),
+        path.join(srcPath, 'infrastructure', 'database', 'models', 'User.js'),
         path.join(testPath, 'features', 'api', 'users', '**'),
         path.join(testPath, 'support', 'factories', '*.js')
       ]);
